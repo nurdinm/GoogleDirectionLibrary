@@ -23,6 +23,7 @@ import com.akexorcist.googledirection.model.Direction;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.Query;
 
 /**
@@ -41,5 +42,5 @@ public interface DirectionService {
                                  @Query("avoid") String avoid,
                                  @Query("transit_mode") String transitMode,
                                  @Query("alternatives") boolean alternatives,
-                                 @Query("key") String apiKey);
+                                 @Header("Authorization") String apiKey);
 }
